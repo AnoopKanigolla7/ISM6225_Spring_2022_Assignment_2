@@ -463,9 +463,15 @@ namespace ISM6225_Assignment_2_Spring_2022
 
                     for (int i = 0; i < slen; i++)
                     {
-                        if (bulls_string10[i] == '(') { temp.Insert(0, ')'); }
-                        else if (bulls_string10[i] == '{') { temp.Insert(0, '}'); }
-                        else if (bulls_string10[i] == '[') { temp.Insert(0, ']'); }
+                        if (bulls_string10[i] == '(') { 
+                        temp.Insert(0, ')'); 
+                    }
+                        else if (bulls_string10[i] == '{') { 
+                        temp.Insert(0, '}'); 
+                    }
+                        else if (bulls_string10[i] == '[') { 
+                        temp.Insert(0, ']'); 
+                    }
                         else if (x.Contains(bulls_string10[i]) && temp.Count > 0 && bulls_string10[i] == temp[0])
                         {
                             temp.RemoveAt(0);
@@ -609,8 +615,9 @@ namespace ISM6225_Assignment_2_Spring_2022
                 static int sol(String word1, String word2, int s1, int s2)
                 {
                     if (s1 == 0)
+                    {
                         return s2;
-
+                    }
                     if (s2 == 0)
                         return s1;
 
