@@ -134,7 +134,7 @@ namespace ISM6225_Assignment_2_Spring_2022
                 try
                 {
                     int l = 0, r = nums.Length, mid = 0, check = 0;
-                    while (l < r)
+                    while (l < r)//if left is less than right
                     {
                         if (target < nums[l]) { mid = 0; break; }
                         mid = (l + r) / 2;
@@ -519,7 +519,7 @@ namespace ISM6225_Assignment_2_Spring_2022
                 {
                     string[] morse = new string[26] { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.." };
                     List<string> c = new List<string>();
-                    string x = "";
+                    string x = ""; 
                     for (int i = 0; i < words.Length; i++)
                     {
                         for (int j = 0; j < words[i].Length; j++)
