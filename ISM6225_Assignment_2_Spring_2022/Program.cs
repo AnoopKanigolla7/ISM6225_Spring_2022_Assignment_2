@@ -553,35 +553,12 @@ namespace ISM6225_Assignment_2_Spring_2022
 
             */
 
-            static int fp(int[,] grid, int i, int j, bool[,] path)
-            {
-
-                int c = grid.GetLength(0);
-                int r = grid.Length / grid.GetLength(0);
-                if (i >= r || j >= c || i < 0 || j < 0) { return 0; };
-                int a1, a2, a3, a4;
-                if (path[i, j])
-                {
-                    path[i, j] = false;
-                    a1 = Math.Max(grid[i, j], fp(grid, i, j + 1, path));
-                    a2 = Math.Max(grid[i, j], fp(grid, i + 1, j, path));
-                    a3 = Math.Max(grid[i, j], fp(grid, i - 1, j, path));
-                    a4 = Math.Max(grid[i, j], fp(grid, i, j - 1, path));
-                }
-                else
-                {
-                    return 0;
-                }
-
-                return (Math.Max(Math.Max(a1, a2), Math.Max(a3, a4)));
-
-            }
+            
             static int SwimInWater(int[,] grid)
             {
                 try
                 {
-                    bool[,] path = { { true, true, true, true, true }, { true, true, true, true, true }, { true, true, true, true, true }, { true, true, true, true, true }, { true, true, true, true, true } };
-                    return fp(grid, 0, 0, path);
+                return 0;
                 }
                 catch (Exception)
                 {
