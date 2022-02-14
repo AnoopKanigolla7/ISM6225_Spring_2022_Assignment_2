@@ -621,18 +621,18 @@ namespace ISM6225_Assignment_2_Spring_2022
                     return min(sol(word1, word2, s1, s2 - 1), sol(word1, word2, s1 - 1, s2), sol(word1, word2, s1 - 1, s2 - 1)) + 1;
                 }
 
-                static int min(int a, int b, int c)
+                static int min(int x, int y, int z)
                 {
-                    if (a <= b && a <= c)
-                        return a;
-                    if (b <= a && b <= c)
-                        return b;
+                    if (x <= y && x <= z)
+                        return x;
+                    if (y <= x && y <= z)
+                        return y;
                     else
-                        return c;
+                        return z;
                 }
             }
-        }
+    }
 
         
-    }
+    
 }
